@@ -101,7 +101,7 @@ def user_email_verification_info(xblock):
 
     if user:
         return {
-            'custom_is_user_email_verified': user.is_active,
+            'custom_is_user_email_verified': "true" if user.is_active else "false",
         }
     return {}
 
